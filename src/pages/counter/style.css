@@ -1,0 +1,14 @@
+.counter-wrapper{
+  gap: 5px;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+p{
+  font-size: 24px;
+}
+
+button{
+  width: 30px;
+  font-size: 20px;
+}
