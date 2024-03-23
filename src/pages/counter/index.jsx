@@ -2,7 +2,7 @@ import "./style.css"
 import { useEffect, useState } from "react";
 
 
-const Counter = (depth = 0) => {
+const Counter = ({ depth = 0, onRemove }) => {
   const [ children, setChildren ] = useState([])
 
   const addChild = () => {
@@ -14,15 +14,24 @@ const Counter = (depth = 0) => {
     console.log(children)
   } 
   
+  const removeChild = (id, depth) => {
+    if(depth > 0){
+      setChildren(children.filter(child => child.id !== id))
+    }
+  }
+
+
   return (
     <div className="counter-wrapper">
       <span>- 1</span>
       <button className="button" onClick={addChild}>+</button>
-      <button className="button">-</button>
+      <button className="button" onClick={onRemove}>-</button>
       {children.map((child) => (
           <Counter
           key = {child.id}
           depth = {child.depth}
+          onRemove = {()=>removeChild(child.id, child.depth)}
+
           />
       ))}
     </div>
