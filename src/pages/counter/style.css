@@ -1,5 +1,6 @@
 .counter-wrapper{
- margin-left: 15px;
+ margin: 0 0 20px 15px;
+
 }
 
 p{
@@ -9,4 +10,5 @@ p{
 button{
   width: 30px;
   font-size: 20px;
+  margin-left: 10px;
 }
