@@ -1,10 +1,10 @@
 import "./styles/utilities.css";
 import Counter from "./pages/counter/index.jsx";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <Counter></Counter>
+      <Counter />
     </div>
   );
 }
